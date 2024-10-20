@@ -1,0 +1,71 @@
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app#
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 2</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+^[[A<html>
+<h1>This is version 2</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 2</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# curl http://canary-svc
+<html>
+<h1>This is version 1</h1>
+</html>
+root@hello-world-5c7b657bb8-rq65k:/app# exit
+exit

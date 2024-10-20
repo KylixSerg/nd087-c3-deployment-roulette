@@ -2,40 +2,38 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hello-world
-  name: hello-world
+    app: green
+  name: green
   namespace: udacity
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: hello-world
+      app: green
   template:
     metadata:
       labels:
-        app: hello-world
+        app: green
     spec:
       containers:
-        - image: etapau/hello-world:udacity
-          imagePullPolicy: Always
-          name: hello-world
+        - name: nginx
+          image: nginx
           ports:
-            - containerPort: 9000
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              port: 9000
-              path: /
-            initialDelaySeconds: 2
-            periodSeconds: 2
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /usr/share/nginx/html
+              name: configmap-vol
       nodeSelector:
         kubernetes.io/os: linux
-      restartPolicy: Always
+      volumes:
+        - name: configmap-vol
+          configMap:
+            name: green-config
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: green
   namespace: udacity
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
@@ -44,7 +42,7 @@ spec:
   ports:
     - port: 80
       protocol: TCP
-      targetPort: 9000
+      targetPort: 80
   selector:
-    app: hello-world
+    app: green
   type: LoadBalancer

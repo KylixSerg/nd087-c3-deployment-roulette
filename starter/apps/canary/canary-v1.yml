@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
       app: canary
+      version: "1.0"
   template:
     metadata:
       labels:
